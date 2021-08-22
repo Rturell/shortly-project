@@ -1,6 +1,6 @@
 <template>
   <div id="nav">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg">
       <div class="container">
         <a class="navbar-brand" href="#">Shortly</a>
         <button
@@ -28,8 +28,8 @@
 
           </ul>
           <form class="d-flex">
-            <a class="nav-link" href="#">Login</a>
-            <a class="nav-link btn btn-success" href="#">Sign Up</a>
+            <a class="nav-link login-link me-3" href="#">Login</a>
+            <a class="nav-link btn btn-signup" href="#">Sign Up</a>
           </form>
         </div>
       </div>
@@ -44,20 +44,49 @@
   font-family: 'Poppins', sans-serif;
 }
 
-#nav a {
-  color: #2c3e50;
+#nav {
+  padding: 1rem 0rem 1rem 0rem;
+}
+
+#nav .navbar-light {
+  background-color: white;
 }
 
 #nav .navbar-brand {
-  font-weight: 600;
+  font-weight: 800;
+  color: hsl(255, 11%, 22%);
+  padding-right: 2rem;
+}
+
+#nav .nav-link {
+    font-size: 14px;
+    font-weight: 500;
+    color: hsl(0, 0%, 75%);
+}
+
+#nav .nav-link:hover {
+    color: hsl(260, 8%, 14%);
 }
 
 #nav .nav-item {
-  font-size: 14px;
   padding-right: 1rem;
+
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+#nav .login-link {
+  color:hsl(0, 0%, 75%) ;
 }
+
+#nav .login-link:hover {
+  color:hsl(260, 8%, 14%)
+}
+
+#nav .btn-signup {
+  background-color: hsl(180, 66%, 49%);
+  color: white;
+  border-radius: 25px;
+  padding: 0.5rem 1rem 0.5 1rem;
+}
+
+
 </style>
