@@ -45,6 +45,88 @@
     </nav>
 
     <router-view />
+
+     <footer class="bg-dark text-white text-center text-lg-start ">
+      <!-- Grid container -->
+      <div class="container pt-5">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+            <img class="logo-footer" src="@/assets/logo.svg" alt="">
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+            <h6 class="text-white mb-4 fw-bolder">Features</h6>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">Link Shortening</a>
+              </li>
+              <li>
+                <a href="#!">Branded Links</a>
+              </li>
+              <li>
+                <a href="#!">Analytics</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+            <h6 class="text-white mb-4 fw-bolder">Resources</h6>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">Blog</a>
+              </li>
+              <li>
+                <a href="#!">Developers</a>
+              </li>
+              <li>
+                <a href="#!">Support</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+            <h6 class="text-white mb-4 fw-bolder">Company</h6>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Our Team</a>
+              </li>
+              <li>
+                <a href="#">Careers</a>
+              </li>
+               <li>
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column Icons Social-->
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+            <i class="fab fa-facebook-square lead me-3"></i>
+            <i class="fab fa-twitter lead me-3"></i>
+            <i class="fab fa-pinterest lead me-3"></i>
+            <i class="fab fa-instagram lead"></i>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Grid container -->
+    </footer>
   </div>
 </template>
 
@@ -73,7 +155,24 @@
 #nav .login-link:hover {
   color: hsl(260, 8%, 14%);
 }
+.logo-footer{
+  filter:invert(1);
+}
 
+ul li a{
+  color:hsl(0, 0%, 53%);
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+ul li a:hover{
+  color: hsl(180, 66%, 49%);;
+}
+i{
+  cursor: pointer;
+}
+i:hover{
+  color: hsl(180, 66%, 49%)
+}
 /* Small devices (landscape phones, 320px and up) */
 
 @media (min-width: 320px) {
@@ -106,6 +205,10 @@
 
   #nav .navbar-toggler {
     border: 0px;
+  }
+
+  footer{
+    height: auto;
   }
 }
 
@@ -151,6 +254,10 @@
 
   #nav img {
     max-width: 80%;
+  }
+
+  footer{
+    height: 250px;
   }
 }
 
