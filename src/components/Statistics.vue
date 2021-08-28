@@ -84,7 +84,7 @@ export default {
         margin: 0 auto;
         z-index: 1;
         position: relative;
-        top: 1200px;
+        top: 1175px;
     }
 
     /* Desktop */  
