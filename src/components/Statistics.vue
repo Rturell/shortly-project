@@ -92,7 +92,7 @@ export default {
 
         .statis {
             margin-top: 0;
-            height: 90vh;
+            height: 50rem;
         }
 
         .statis__desc {
