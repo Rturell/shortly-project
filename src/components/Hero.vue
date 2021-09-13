@@ -16,11 +16,23 @@
             </div>
           </div>
         </div>
+         <div class="container-link">
+           <div class="fondo-link">
+           </div>
+        <div class="row" id="row-especial">
+          <div class="col-xl-6 col-lg-6">
+            <input type="text" placeholder="Shorten a link here">
+          </div>
+          <div class="col-xl-6 col-lg-6" id="button">
+            <button>Shorten it!</button>
+          </div>
+        </div>
       </div>
+      </div>
+     
     </section>
   </div>
 </template>
-
 <script>
 export default {
   data() {
@@ -63,6 +75,44 @@ export default {
   text-align: right;
   width: 41rem;
 }
+.container-link{
+  padding: 2rem;
+    width: 64%;
+    background: #3a3053;
+    margin: auto;
+    margin-top: 2rem;
+    border-radius: 0.3rem;
+      background-image: url('../assets/shortly.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#button{
+    display: flex;
+    justify-content: flex-end;
+}
+#button button{
+  width: 44%;
+  outline: none;
+  border: none;
+  background: hsl(180, 66%, 49%);
+  color: white;
+  border-radius: 0.54rem;
+}
+.container-link input{
+  width: 146%;
+    padding: 0.5rem;
+        border-radius: 0.4rem;
+    border: none;
+    outline: none;
+}
+::-webkit-input-placeholder { color: hsl(0, 0%, 75%);; }
+::-moz-placeholder { color: hsl(0, 0%, 75%);; }
+/* .fondo-link{
+
+  height: 5rem;
+  position: relative;
+} */
 /* Media Queries */
 @media screen and (min-width: 1024px) and (max-width: 1100px) {
   .imagen-hero img {
@@ -72,6 +122,9 @@ export default {
     text-align: left;
     width: 30rem;
   }
+  .container-link{
+    position: relative;
+  }
 }
 @media screen and (min-width: 701px) and (max-width: 1023px) {
   .imagen-hero img {
@@ -79,6 +132,32 @@ export default {
   }
   .imagen-hero {
     text-align: left;
+  }
+  .texto-hero{
+    margin-top: 0rem;
+  }
+  .hero{
+    margin-top: 4rem;
+    height: 42rem;
+  }
+  .container-link{
+    position: relative;
+    height:8.5rem;
+    width: 48%;
+    text-align: center;
+  }
+
+  #button{
+        margin-top: 0.5rem;
+    width: 92%;
+    padding: 0rem;
+  }
+  .container-link input{
+    width: 92%;
+  }
+
+  #button button{
+    width: 91%;
   }
 }
 @media screen and (max-width: 700px) {
@@ -95,8 +174,29 @@ export default {
   .texto-hero {
     margin-top: 0;
   }
-  .hero {
-    margin-top: 2rem;
+    .hero {
+    height: 45rem;
   }
+.container-link{
+  text-align: center;
+  position: relative;
+  margin-bottom: 2rem;
+  height: 9rem;
+  width: 80%;
+}
+.container-link input{
+  width: 96%;
+}
+.fondo-link input{
+  margin-top: 1rem;
+}
+#button button{
+  width: 77%;
+  margin-top: 1rem;
+  width: 95%;
+}
+#button{
+  justify-content: center;
+}
 }
 </style>
