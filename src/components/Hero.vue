@@ -99,6 +99,13 @@ export default {
   color: white;
   border-radius: 0.54rem;
 }
+button{
+    transition: all 0.3s ease-in-out;
+
+}
+ button:hover{
+  background-color: #6EFFFF;
+}
 .container-link input{
   width: 146%;
     padding: 0.5rem;

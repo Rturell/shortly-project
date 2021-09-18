@@ -1,7 +1,8 @@
 <template>
   <div class="home">
     <Hero/>
-    <Statistics />   
+    <Statistics />
+    <Boost/>   
   </div>
 </template>
 
@@ -10,12 +11,14 @@
 
 import Hero from '../components/Hero.vue'
 import Statistics from "../components/Statistics.vue";
+import Boost from '../components/Boost.vue'
 
 export default {
   name: 'Home',
   components: {
     Hero,
-    Statistics
+    Statistics,
+    Boost
   }
 }
 </script>
