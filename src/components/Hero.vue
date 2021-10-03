@@ -21,10 +21,18 @@
            </div>
         <div class="row" id="row-especial">
           <div class="col-xl-6 col-lg-6">
-            <input type="text" placeholder="Shorten a link here">
+            <input v-model="search" type="text" placeholder="Shorten a link here">
           </div>
           <div class="col-xl-6 col-lg-6" id="button">
-            <button>Shorten it!</button>
+            <button v-on:click="searchLinks">Shorten it!</button>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="links">
+         <div v-for="links in link" :key="links.id">
+          <span>{{links.original_link}}</span>
+         <span >{{links.full_short_link}}</span>
           </div>
         </div>
       </div>
@@ -34,14 +42,41 @@
   </div>
 </template>
 <script>
+import axios from "axios"
 export default {
   data() {
     return {
+      search: '',
       msg: "More than just shorter links",
       sub: "Build your brand recognition and get detalled insights on how your links are performing ",
       msgb: "Get Started",
+      link: null,
     };
   },
+  methods:{
+   async getLinks(){
+      let datos = this.search
+      let links = await axios.get(`https://api.shrtco.de/v2/shorten?url=${datos}`)
+      console.log(links)
+      this.link = links.data
+      this.linkto = links.data.full_short_link
+    },
+searchLinks(){
+    this.getLinks()
+},
+// copy(){
+//   try{
+//     navigator.clipboard.writeText(this.linkto)
+//   }catch(e){
+//     throw e
+//   }
+// }
+},
+
+
+// created(){
+//   this.getLinks()
+// }
 };
 </script>
 
@@ -77,7 +112,7 @@ export default {
 }
 .container-link{
   padding: 2rem;
-    width: 64%;
+    /* width: 64%; */
     background: #3a3053;
     margin: auto;
     margin-top: 2rem;
