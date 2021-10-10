@@ -24,7 +24,7 @@
             <input v-model="search" type="text" placeholder="Shorten a link here">
           </div>
           <div class="col-xl-6 col-lg-6" id="button">
-            <button v-on:click="searchLinks">Shorten it!</button>
+            <button v-on:click="getLinks">Shorten it!</button>
           </div>
         </div>
       </div>
@@ -32,8 +32,9 @@
         <div class="links">
          <div v-for="links in link" :key="links.id">
           <span>{{links.original_link}}</span>
-         <span >{{links.full_short_link}}</span>
+         <p id="link" >{{links.full_short_link}}</p>
           </div>
+          <button :class="{ clicked: clicked }" @click="copyToClipboard">{{text}}</button>
         </div>
       </div>
       </div>
@@ -51,6 +52,8 @@ export default {
       sub: "Build your brand recognition and get detalled insights on how your links are performing ",
       msgb: "Get Started",
       link: null,
+      text: "Copy",
+      clicked: false,
     };
   },
   methods:{
@@ -59,24 +62,20 @@ export default {
       let links = await axios.get(`https://api.shrtco.de/v2/shorten?url=${datos}`)
       console.log(links)
       this.link = links.data
-      this.linkto = links.data.full_short_link
     },
-searchLinks(){
-    this.getLinks()
-},
-// copy(){
-//   try{
-//     navigator.clipboard.writeText(this.linkto)
-//   }catch(e){
-//     throw e
-//   }
-// }
-},
-
-
-// created(){
-//   this.getLinks()
-// }
+   copyToClipboard() {
+      let self = this;
+       const textToCopy = document.querySelector("#link").innerText;
+       console.log(textToCopy)
+      navigator.clipboard.writeText(self.link).then(
+        function () {
+          console.log("Async: Copying to clipboard was successful!");
+          self.text = "Copied!";
+          self.clicked = !self.clicked;
+        },
+      );
+    },
+  },
 };
 </script>
 
@@ -201,6 +200,10 @@ button{
   #button button{
     width: 91%;
   }
+}
+.clicked{
+    background: hsl(257, 27%, 26%);
+
 }
 @media screen and (max-width: 700px) {
   .texto-hero h2 {
