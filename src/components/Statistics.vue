@@ -58,7 +58,7 @@ export default {
     .statis__desc {
         max-width: 90%;
         margin: 1rem 1rem 0rem 1rem;
-        padding: 5rem 0 5rem 0;
+        padding: 2rem 0 5rem 0;
     }
 
     .statis__desc h2 {

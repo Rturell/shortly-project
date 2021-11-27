@@ -16,34 +16,13 @@
             </div>
           </div>
         </div>
-         <div class="container-link">
-           <div class="fondo-link">
-           </div>
-        <div class="row" id="row-especial">
-          <div class="col-xl-6 col-lg-6">
-            <input v-model="search" type="text" placeholder="Shorten a link here">
-          </div>
-          <div class="col-xl-6 col-lg-6" id="button">
-            <button v-on:click="getLinks">Shorten it!</button>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="links">
-         <div v-for="links in link" :key="links.id">
-          <span>{{links.original_link}}</span>
-         <p id="link" >{{links.full_short_link}}</p>
-          </div>
-          <button :class="{ clicked: clicked }" @click="copyToClipboard">{{text}}</button>
-        </div>
-      </div>
-      </div>
-     
+                </div>
     </section>
-  </div>
+
+      </div>
+  
 </template>
 <script>
-import axios from "axios"
 export default {
   data() {
     return {
@@ -51,32 +30,12 @@ export default {
       msg: "More than just shorter links",
       sub: "Build your brand recognition and get detalled insights on how your links are performing ",
       msgb: "Get Started",
-      link: null,
-      text: "Copy",
-      clicked: false,
+      
     };
   },
-  methods:{
-   async getLinks(){
-      let datos = this.search
-      let links = await axios.get(`https://api.shrtco.de/v2/shorten?url=${datos}`)
-      console.log(links)
-      this.link = links.data
-    },
-   copyToClipboard() {
-      let self = this;
-       const textToCopy = document.querySelector("#link").innerText;
-       console.log(textToCopy)
-      navigator.clipboard.writeText(self.link).then(
-        function () {
-          console.log("Async: Copying to clipboard was successful!");
-          self.text = "Copied!";
-          self.clicked = !self.clicked;
-        },
-      );
-    },
-  },
-};
+
+}
+
 </script>
 
 <style>
@@ -109,18 +68,7 @@ export default {
   text-align: right;
   width: 41rem;
 }
-.container-link{
-  padding: 2rem;
-    /* width: 64%; */
-    background: #3a3053;
-    margin: auto;
-    margin-top: 2rem;
-    border-radius: 0.3rem;
-      background-image: url('../assets/shortly.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 #button{
     display: flex;
     justify-content: flex-end;
@@ -140,6 +88,7 @@ button{
  button:hover{
   background-color: #6EFFFF;
 }
+
 .container-link input{
   width: 146%;
     padding: 0.5rem;
@@ -147,13 +96,10 @@ button{
     border: none;
     outline: none;
 }
+
 ::-webkit-input-placeholder { color: hsl(0, 0%, 75%);; }
 ::-moz-placeholder { color: hsl(0, 0%, 75%);; }
-/* .fondo-link{
 
-  height: 5rem;
-  position: relative;
-} */
 /* Media Queries */
 @media screen and (min-width: 1024px) and (max-width: 1100px) {
   .imagen-hero img {
@@ -181,21 +127,12 @@ button{
     margin-top: 4rem;
     height: 42rem;
   }
-  .container-link{
-    position: relative;
-    height:8.5rem;
-    width: 48%;
-    text-align: center;
-  }
-
   #button{
         margin-top: 0.5rem;
     width: 92%;
     padding: 0rem;
   }
-  .container-link input{
-    width: 92%;
-  }
+
 
   #button button{
     width: 91%;
@@ -222,19 +159,7 @@ button{
     .hero {
     height: 45rem;
   }
-.container-link{
-  text-align: center;
-  position: relative;
-  margin-bottom: 2rem;
-  height: 9rem;
-  width: 80%;
-}
-.container-link input{
-  width: 96%;
-}
-.fondo-link input{
-  margin-top: 1rem;
-}
+
 #button button{
   width: 77%;
   margin-top: 1rem;
