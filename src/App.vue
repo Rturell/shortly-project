@@ -135,9 +135,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-#nav {
-  padding: 1rem 0rem 1rem 0rem;
-}
+
 
 #nav .navbar-brand {
   font-weight: 800;

@@ -5,7 +5,7 @@
                 <img :src="img" alt="icon" />
             </div>
             <h2 class="statis__box--title">{{ title }}</h2>
-            <p>{{ parraf }}</p>
+            <p class="parraf-box">{{ parraf }}</p>
         </div>
     </div>
 </template>
@@ -102,5 +102,9 @@ export default {
         height: 2.5rem;
     }
 }
-
+@media screen and (min-width:240px) and (max-width:360px){
+    .parraf-box{
+        font-size: 0.8rem;
+    }
+}
 </style>

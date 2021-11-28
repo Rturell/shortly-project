@@ -53,4 +53,14 @@ data() {
 .boton button:hover{
     background-color:#6EFFFF ;
 }
+
+@media screen and (min-width:240px) and (max-width:360px){
+    .boost-titulo h2{
+        font-size: 1rem;
+    }
+    .boton button{
+        width: 9rem;
+        font-size: 0.7rem;
+    }
+}
 </style>

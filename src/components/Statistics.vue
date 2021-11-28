@@ -87,6 +87,15 @@ export default {
         top: 1175px;
     }
 
+
+@media screen and (min-width: 240px) and (max-width: 360px) {
+.statis__desc h2{
+    font-size: 1.5rem;
+}
+.statis__desc p{
+    font-size: 0.8rem;
+}
+}
     /* Desktop */  
     @media ( min-width: 1344px ){
 

@@ -169,4 +169,16 @@ button{
   justify-content: center;
 }
 }
+@media screen and (min-width: 240px) and (max-width: 360px) {
+  .texto-hero h2{
+    font-size: 1.5rem;
+  }
+  .texto-hero span{
+    font-size: 0.9rem;
+  }
+  .button{
+    width: 9rem;
+    font-size: 0.9rem;
+  }
+  }
 </style>
