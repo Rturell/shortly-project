@@ -12,7 +12,6 @@ _Integration with the shrtcode API to create shortened URLs.”_
 - [@diloes](https://github.com/diloes)
 
 ## Technologies 🛠️
-_Client:_
 * Vue 
 * BootstrapVue
 * Axios
