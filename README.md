@@ -1,11 +1,15 @@
-# TravelApp
+# Shortly-App
 
+![screenbud-789405b1-aff9-4873-b4d4-05caac173a5a](https://user-images.githubusercontent.com/83327665/143964150-903de7f3-ac65-40eb-9364-88b9d309eebc.png)
 
-_Connection to the API of Travelbriefing. The information that Travelbriefing.org provides includes the following: health & vaccines, electric sockets and language and more...”_
+_Integration with the shrtcode API to create shortened URLs.”_
 
 ## Author 🧑‍💼
 
 - [@Felipev98](https://github.com/Felipev98/)
+- [@Rturell](https://github.com/Rturell)
+- [@3ddevelooper](https://github.com/3ddevelooper)
+- [@diloes](https://github.com/diloes)
 
 ## Technologies 🛠️
 _Client:_
