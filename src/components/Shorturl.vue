@@ -168,7 +168,6 @@ width: 64%;
 }
 .container-link-input-rojo::placeholder{
   color: #f46262;
-  opacity: 60%;
 }
 
 @media screen and (min-width: 701px) and (max-width: 1023px){
