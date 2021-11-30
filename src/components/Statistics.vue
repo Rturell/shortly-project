@@ -86,7 +86,17 @@ export default {
         position: relative;
         top: 1175px;
     }
+@media screen and (min-width: 701px) and (max-width: 1023px) {
+    .statis{
+        margin-top: -11rem;
+    }
+}
 
+@media screen and (max-width:700px){
+    .statis{
+        margin-top: -11rem;
+    }
+}
 
 @media screen and (min-width: 240px) and (max-width: 360px) {
 .statis__desc h2{
@@ -94,6 +104,12 @@ export default {
 }
 .statis__desc p{
     font-size: 0.8rem;
+}
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1300px) {
+.statis{
+    margin-top: -30rem;
 }
 }
     /* Desktop */  

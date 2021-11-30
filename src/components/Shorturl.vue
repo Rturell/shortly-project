@@ -140,7 +140,15 @@ export default {
     color: #ffff;
     outline: none;
     border-radius: 0.54rem;
+    transition: all 0.3s ease-in-out;
 }
+.copy:hover{
+  background: #6EFFFF;
+}
+#button button:hover{
+  background: #6EFFFF;
+}
+
 .copied{
   height: 2.4rem;
   width: 7rem;
@@ -173,6 +181,40 @@ width: 64%;
   .container-link input{
     width: 92%;
   }
+  .link-ol{
+    width: 100%;
+  }
+  #link{
+    width: 100%;
+  }
+  .copy{
+    width: 100%;
+    margin: auto;
+    margin-top: 1rem;
+  }
+#button button{
+  width: 50%;
+  padding: 0.6rem;
+  margin: auto;
+}
+.mensaje-error{
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+#button{
+  width: 100%;
+}
+.container-link-input-rojo{
+  width: 100%;
+}
+.container-link{
+  height: auto;
+  width: 100%;
+}
+.copied{
+  width: 100%;
+  margin-top: 1rem;
+}
 }
 @media screen and (max-width: 700px) {
 

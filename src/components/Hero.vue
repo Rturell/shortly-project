@@ -101,7 +101,7 @@ button{
 ::-moz-placeholder { color: hsl(0, 0%, 75%);; }
 
 /* Media Queries */
-@media screen and (min-width: 1024px) and (max-width: 1100px) {
+@media screen and (min-width: 1024px) and (max-width: 1300px) {
   .imagen-hero img {
     width: 29rem;
   }
@@ -112,10 +112,13 @@ button{
   .container-link{
     position: relative;
   }
+  #nav img{
+    max-width: 90%;
+  }
 }
 @media screen and (min-width: 701px) and (max-width: 1023px) {
   .imagen-hero img {
-    width: 19rem;
+    width: 28rem;
   }
   .imagen-hero {
     text-align: left;
@@ -164,6 +167,7 @@ button{
   width: 77%;
   margin-top: 1rem;
   width: 95%;
+  padding: 0.5rem;
 }
 #button{
   justify-content: center;
